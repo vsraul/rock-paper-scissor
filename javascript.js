@@ -23,14 +23,17 @@ function getHumanChoice (){
     choice = choice.toUpperCase();
     switch(choice){
         case "ROCK":
+        case "R":
             choice = "Rock";
             return choice;
         case "PAPER":
+        case "P":
             choice = "Paper";
             return choice;
         
         case "SCISSOR":
         case "SCISSORS":
+        case "S":
             choice = "Scissors";
             return choice;
         default:
@@ -43,42 +46,42 @@ function playRound(humanChoice, computerChoice){
     switch (humanChoice) {
         case "Rock":
             if (computerChoice === "Scissors") {
-                console.log("Rock beats Scissors. You win!");
+                alert("Rock beats Scissors. You win!");
                 humanScore++;
             } else if (computerChoice === "Paper") {
-                console.log("Paper beats Rock. You lose!");
+                alert("Paper beats Rock. You lose!");
                 computerScore++;
             } else {
-                console.log("It's a tie. Try again.");
+                alert("It's a tie. Try again.");
                 tieCounter++;
             }
             break;
         case "Paper":
             if (computerChoice === "Rock") {
-                console.log("Paper beats Rock. You win!");
+                alert("Paper beats Rock. You win!");
                 humanScore++;
             } else if (computerChoice === "Scissors") {
-                console.log("Scissors beats Paper. You lose!");
+                alert("Scissors beats Paper. You lose!");
                 computerScore++;
             } else {
-                console.log("It's a tie. Try again.");
+                alert("It's a tie. Try again.");
                 tieCounter++;
             }
             break;
         case "Scissors":
             if (computerChoice === "Paper") {
-                console.log("Scissors beats Paper. You win!");
+                alert("Scissors beats Paper. You win!");
                 humanScore++;
             } else if (computerChoice === "Rock") {
-                console.log("Rock beats Scissors. You lose!");
+                alert("Rock beats Scissors. You lose!");
                 computerScore++;
             } else {
-                console.log("It's a tie. Try again.");
+                alert("It's a tie. Try again.");
                 tieCounter++;
             }
             break;
         default:
-            console.log("Invalid choice");
+            alert("Invalid choice");
         }
 }
 
@@ -93,19 +96,26 @@ function playGame(){
     }
 
     if(humanScore > computerScore){
-        console.log("YOU WIN!");
+        alert("YOU WIN!");
     }
     else if(humanScore < computerScore){
-        console.log("YOU LOSE!");
+        alert("YOU LOSE!");
     }
     else{
-        console.log("IT'S A TIE!");
+        alert("IT'S A TIE!");
     }
+    clearScore();
+    
+}
+
+function clearScore(){
+    humanScore = 0;
+    computerScore = 0;
+    tieCounter =0;
 }
 
 
-console.log("Let the game begin!");
-console.log("The player with most wins from 5 games takes the crown.");
+alert("Let the game begin!\n\nThe player with most wins from 5 games takes the crown.");
 playGame();
 
 
