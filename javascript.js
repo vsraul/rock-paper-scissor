@@ -97,20 +97,25 @@ function playGame(){
             tieCounter--;
         }
     }
+    endGame();
+}
 
+function endGame(){
+    showScore();
+    showResults();
+    clearScore();
+}
+
+function showResults(){
     if(humanScore > computerScore){
-        showScore();
         alert("YOU WIN!");
     }
     else if(humanScore < computerScore){
-        showScore();
         alert("YOU LOSE!");
     }
     else{
-        showScore();
         alert("IT'S A TIE!");
     }
-    clearScore();
 }
 
 function clearScore(){
