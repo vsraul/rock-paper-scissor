@@ -19,21 +19,24 @@ function getComputerChoice (){
 }
 
 function getHumanChoice (){
-    let choice = prompt("What's it gonna be? Rock, Paper or Scissors?");
+    let choice = prompt("What's it gonna be? Rock 🪨, Paper 📜 or Scissors ✂️?");
     choice = choice.toUpperCase();
     switch(choice){
         case "ROCK":
         case "R":
+        case "🪨":
             choice = "Rock";
             return choice;
         case "PAPER":
         case "P":
+        case "📜":
             choice = "Paper";
             return choice;
         
         case "SCISSOR":
         case "SCISSORS":
         case "S":
+        case "✂️":
             choice = "Scissors";
             return choice;
         default:
@@ -46,10 +49,10 @@ function playRound(humanChoice, computerChoice){
     switch (humanChoice) {
         case "Rock":
             if (computerChoice === "Scissors") {
-                alert("Rock beats Scissors. You win!");
+                alert("Rock 🪨 beats Scissors ✂️. You win!");
                 humanScore++;
             } else if (computerChoice === "Paper") {
-                alert("Paper beats Rock. You lose!");
+                alert("Paper 📜 beats Rock 🪨. You lose!");
                 computerScore++;
             } else {
                 alert("It's a tie. Try again.");
@@ -58,10 +61,10 @@ function playRound(humanChoice, computerChoice){
             break;
         case "Paper":
             if (computerChoice === "Rock") {
-                alert("Paper beats Rock. You win!");
+                alert("Paper 📜 beats Rock 🪨. You win!");
                 humanScore++;
             } else if (computerChoice === "Scissors") {
-                alert("Scissors beats Paper. You lose!");
+                alert("Scissors ✂️ beats Paper 📜. You lose!");
                 computerScore++;
             } else {
                 alert("It's a tie. Try again.");
@@ -70,10 +73,10 @@ function playRound(humanChoice, computerChoice){
             break;
         case "Scissors":
             if (computerChoice === "Paper") {
-                alert("Scissors beats Paper. You win!");
+                alert("Scissors ✂️ beats Paper 📜. You win!");
                 humanScore++;
             } else if (computerChoice === "Rock") {
-                alert("Rock beats Scissors. You lose!");
+                alert("Rock 🪨 beats Scissors ✂️. You lose!");
                 computerScore++;
             } else {
                 alert("It's a tie. Try again.");
