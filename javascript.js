@@ -96,16 +96,18 @@ function playGame(){
     }
 
     if(humanScore > computerScore){
+        showScore();
         alert("YOU WIN!");
     }
     else if(humanScore < computerScore){
+        showScore();
         alert("YOU LOSE!");
     }
     else{
+        showScore();
         alert("IT'S A TIE!");
     }
     clearScore();
-    
 }
 
 function clearScore(){
@@ -114,6 +116,9 @@ function clearScore(){
     tieCounter =0;
 }
 
+function showScore(){
+    alert("Your score is " + humanScore + " vs " + computerScore + " from the computer.");
+}
 
 alert("Let the game begin!\n\nThe player with most wins from 5 games takes the crown.");
 playGame();
